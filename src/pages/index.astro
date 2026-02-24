@@ -1,63 +1,184 @@
 ---
-import "../styles/global.css";
+import "../styles/tailwind.css";
 ---
 
-<html lang="pl">
+<html lang="pl" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+3:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Kancelaria notarialna</title>
 	</head>
-	<body>
-		<header class="site-header">
-			<nav class="top-nav" aria-label="Nawigacja główna">
-				<strong class="brand">Kancelaria notarialna</strong>
-				<div class="menu-links">
-					<a class="menu-link" href="#o-nas">O nas</a>
-					<a class="menu-link" href="#uslugi">Usługi</a>
-					<a class="menu-link" href="#kontakt">Kontakt</a>
+	<body
+		class="overflow-x-hidden bg-[#f7f7f9] font-['Source_Sans_3',Inter,-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif] text-base leading-relaxed text-[#44444a]"
+	>
+		<header class="sticky top-0 z-10 border-b border-[#e5e5ea] bg-white">
+			<nav
+				class="mx-auto grid w-full max-w-[1200px] grid-cols-[1fr_auto] items-center gap-3 p-4 sm:p-5 md:grid-cols-[auto_1fr_auto] md:gap-6 md:px-7 md:py-[22px] lg:gap-8 lg:px-8 lg:py-6 2xl:px-10"
+				aria-label="Nawigacja główna"
+			>
+				<strong
+					class="font-['Playfair_Display','Cormorant_Garamond',Georgia,serif] text-lg font-semibold leading-tight text-[#2b2b2f]"
+				>
+					Kancelaria notarialna
+				</strong>
+				<button
+					class="menu-toggle inline-flex min-h-[44px] min-w-[44px] flex-col justify-center gap-1.5 rounded-md border border-[#e5e5ea] bg-white p-2 text-[#2b2b2f] md:hidden"
+					type="button"
+					aria-expanded="false"
+					aria-controls="main-menu"
+					aria-label="Otwórz menu"
+				>
+					<span aria-hidden="true" class="h-0.5 w-[22px] bg-current"></span>
+					<span aria-hidden="true" class="h-0.5 w-[22px] bg-current"></span>
+					<span aria-hidden="true" class="h-0.5 w-[22px] bg-current"></span>
+				</button>
+				<div
+					id="main-menu"
+					class="menu-links col-span-full hidden flex-col items-stretch gap-2 pt-1 md:col-auto md:flex md:flex-row md:items-center md:justify-center md:gap-5 md:pt-0 lg:gap-8"
+				>
+					<a
+						class="menu-link inline-flex min-h-[44px] items-center border-b-2 border-transparent px-1 py-2.5 text-base font-medium text-[#2b2b2f] transition-colors"
+						href="#o-nas">O nas</a
+					>
+					<a
+						class="menu-link inline-flex min-h-[44px] items-center border-b-2 border-transparent px-1 py-2.5 text-base font-medium text-[#2b2b2f] transition-colors"
+						href="#uslugi">Usługi</a
+					>
+					<a
+						class="menu-link inline-flex min-h-[44px] items-center border-b-2 border-transparent px-1 py-2.5 text-base font-medium text-[#2b2b2f] transition-colors"
+						href="#kontakt">Kontakt</a
+					>
 				</div>
-				<a class="cta-button" href="#kontakt">Umów wizytę</a>
+				<a
+					class="col-span-full inline-flex min-h-[44px] items-center justify-center rounded-md bg-[#7b6886] px-5 py-2.5 text-base font-semibold tracking-[0.3px] text-white transition-colors hover:bg-[#665571] md:col-auto md:justify-self-end md:px-6"
+					href="#kontakt"
+				>
+					Umów wizytę
+				</a>
 			</nav>
 		</header>
 
-		<main class="main-content">
-			<section id="o-nas" class="section">
-				<h2>O nas</h2>
+		<main class="mx-auto w-full max-w-[1200px] px-4 pb-14 pt-8 sm:px-5 sm:pb-16 sm:pt-10 md:px-7 md:pb-20 md:pt-16 lg:px-8 lg:py-[88px] 2xl:px-10">
+			<section
+				id="o-nas"
+				class="rounded-md border border-[#e5e5ea] bg-white px-4 py-6 shadow-[0_4px_12px_rgba(0,0,0,0.04)] sm:px-5 sm:py-7 md:px-7 md:py-9 lg:p-12"
+			>
+				<h2
+					class="mb-3 font-['Playfair_Display','Cormorant_Garamond',Georgia,serif] text-[30px] font-semibold leading-tight tracking-[-0.3px] text-[#2b2b2f] md:text-[34px] lg:text-4xl"
+				>
+					O nas
+				</h2>
 				<p>
 					Świadczymy czynności notarialne z dbałością o bezpieczeństwo prawne,
 					poufność oraz przejrzystą komunikację na każdym etapie współpracy.
 				</p>
 			</section>
 
-			<section id="uslugi" class="section">
-				<h2>Usługi</h2>
+			<section
+				id="uslugi"
+				class="mt-4 rounded-md border border-[#e5e5ea] bg-white px-4 py-6 shadow-[0_4px_12px_rgba(0,0,0,0.04)] sm:px-5 sm:py-7 md:mt-6 md:px-7 md:py-9 lg:mt-8 lg:p-12"
+			>
+				<h2
+					class="mb-3 font-['Playfair_Display','Cormorant_Garamond',Georgia,serif] text-[30px] font-semibold leading-tight tracking-[-0.3px] text-[#2b2b2f] md:text-[34px] lg:text-4xl"
+				>
+					Usługi
+				</h2>
 				<p>
 					Przygotowujemy akty notarialne, poświadczenia i pełnomocnictwa dla osób
 					prywatnych oraz firm, zgodnie z najwyższymi standardami jakości.
 				</p>
 			</section>
 
-			<section id="kontakt" class="section">
-				<h2>Kontakt</h2>
+			<section
+				id="kontakt"
+				class="mt-4 rounded-md border border-[#e5e5ea] bg-white px-4 py-6 shadow-[0_4px_12px_rgba(0,0,0,0.04)] sm:px-5 sm:py-7 md:mt-6 md:px-7 md:py-9 lg:mt-8 lg:p-12"
+			>
+				<h2
+					class="mb-3 font-['Playfair_Display','Cormorant_Garamond',Georgia,serif] text-[30px] font-semibold leading-tight tracking-[-0.3px] text-[#2b2b2f] md:text-[34px] lg:text-4xl"
+				>
+					Kontakt
+				</h2>
 				<p>
 					Skontaktuj się z nami telefonicznie lub mailowo, aby umówić termin
 					spotkania dopasowany do Twoich potrzeb.
 				</p>
+				<ul class="mt-4 grid list-none gap-2 p-0">
+					<li>
+						<a
+							class="inline-flex min-h-[44px] items-center font-semibold text-[#7b6886] underline-offset-2 hover:text-[#665571]"
+							href="tel:+48123456789"
+						>
+							+48 123 456 789
+						</a>
+					</li>
+					<li>
+						<a
+							class="inline-flex min-h-[44px] items-center font-semibold text-[#7b6886] underline-offset-2 hover:text-[#665571]"
+							href="mailto:kontakt@kancelaria.pl"
+						>
+							kontakt@kancelaria.pl
+						</a>
+					</li>
+					<li>
+						<a
+							class="inline-flex min-h-[44px] items-center font-semibold text-[#7b6886] underline-offset-2 hover:text-[#665571]"
+							href="https://maps.google.com/?q=Krakowskie+Przedmieście+10,+Warszawa"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Krakowskie Przedmieście 10, Warszawa
+						</a>
+					</li>
+				</ul>
 			</section>
 		</main>
 
 		<script is:inline>
+			const menuToggle = document.querySelector(".menu-toggle");
+			const menuLinks = document.querySelector(".menu-links");
 			const sectionLinks = Array.from(document.querySelectorAll(".menu-link"));
 			const sections = Array.from(document.querySelectorAll("main section[id]"));
+			const desktopMedia = window.matchMedia("(min-width: 768px)");
+
+			const setMenuOpen = (isOpen) => {
+				if (!menuToggle || !menuLinks) return;
+				menuToggle.setAttribute("aria-expanded", String(isOpen));
+				menuToggle.setAttribute("aria-label", isOpen ? "Zamknij menu" : "Otwórz menu");
+				menuLinks.classList.toggle("hidden", !isOpen);
+				menuLinks.classList.toggle("flex", isOpen);
+			};
+
+			if (menuToggle && menuLinks) {
+				menuToggle.addEventListener("click", () => {
+					const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+					setMenuOpen(!isOpen);
+				});
+
+				sectionLinks.forEach((link) => {
+					link.addEventListener("click", () => setMenuOpen(false));
+				});
+
+				desktopMedia.addEventListener("change", (event) => {
+					if (event.matches) setMenuOpen(false);
+				});
+			}
 
 			const setActiveLink = (id) => {
 				sectionLinks.forEach((link) => {
 					const isActive = link.getAttribute("href") === `#${id}`;
-					link.classList.toggle("active", isActive);
+					link.classList.toggle("text-[#7b6886]", isActive);
+					link.classList.toggle("border-[#7b6886]", isActive);
+					link.classList.toggle("text-[#2b2b2f]", !isActive);
+					link.classList.toggle("border-transparent", !isActive);
 				});
 			};
 
