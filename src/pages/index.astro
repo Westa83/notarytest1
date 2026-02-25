@@ -13,9 +13,10 @@ import "../styles/tailwind.css";
 			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+3:wght@400;500;600&display=swap"
 			rel="stylesheet"
 		/>
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Kancelaria notarialna — pewność i zaufanie. Czynności notarialne, akty, pełnomocnictwa. Bezpieczeństwo prawne i indywidualne podejście. Umów wizytę." />
 		<meta name="generator" content={Astro.generator} />
-		<title>Kancelaria notarialna</title>
+		<title>Kancelaria notarialna — pewność i zaufanie</title>
 	</head>
 	<body
 		class="overflow-x-hidden bg-[#f7f7f9] font-['Source_Sans_3',Inter,-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif] text-base leading-relaxed text-[#44444a]"
@@ -31,7 +32,7 @@ import "../styles/tailwind.css";
 					Kancelaria notarialna
 				</strong>
 				<button
-					class="menu-toggle inline-flex min-h-[44px] min-w-[44px] flex-col justify-center gap-1.5 rounded-md border border-[#e5e5ea] bg-white p-2 text-[#2b2b2f] md:hidden"
+					class="menu-toggle inline-flex min-h-[44px] min-w-[44px] flex-col justify-center gap-1.5 rounded-md border border-[#e5e5ea] bg-white p-2 text-[#2b2b2f] focus:outline-none focus:ring-2 focus:ring-[#7b6886] focus:ring-offset-2 md:hidden"
 					type="button"
 					aria-expanded="false"
 					aria-controls="main-menu"
@@ -46,20 +47,20 @@ import "../styles/tailwind.css";
 					class="menu-links col-span-full hidden flex-col items-stretch gap-2 pt-1 md:col-auto md:flex md:flex-row md:items-center md:justify-center md:gap-5 md:pt-0 lg:gap-8"
 				>
 					<a
-						class="menu-link inline-flex min-h-[44px] items-center border-b-2 border-transparent px-1 py-2.5 text-base font-medium text-[#2b2b2f] transition-colors"
+						class="menu-link inline-flex min-h-[44px] min-w-[44px] items-center justify-center border-b-2 border-transparent px-3 py-2.5 text-base font-medium text-[#2b2b2f] transition-colors focus:outline-none focus:ring-2 focus:ring-[#7b6886] focus:ring-inset rounded"
 						href="#o-nas">O nas</a
 					>
 					<a
-						class="menu-link inline-flex min-h-[44px] items-center border-b-2 border-transparent px-1 py-2.5 text-base font-medium text-[#2b2b2f] transition-colors"
+						class="menu-link inline-flex min-h-[44px] min-w-[44px] items-center justify-center border-b-2 border-transparent px-3 py-2.5 text-base font-medium text-[#2b2b2f] transition-colors focus:outline-none focus:ring-2 focus:ring-[#7b6886] focus:ring-inset rounded"
 						href="#uslugi">Usługi</a
 					>
 					<a
-						class="menu-link inline-flex min-h-[44px] items-center border-b-2 border-transparent px-1 py-2.5 text-base font-medium text-[#2b2b2f] transition-colors"
+						class="menu-link inline-flex min-h-[44px] min-w-[44px] items-center justify-center border-b-2 border-transparent px-3 py-2.5 text-base font-medium text-[#2b2b2f] transition-colors focus:outline-none focus:ring-2 focus:ring-[#7b6886] focus:ring-inset rounded"
 						href="#kontakt">Kontakt</a
 					>
 				</div>
 				<a
-					class="col-span-full inline-flex min-h-[44px] items-center justify-center rounded-md bg-[#7b6886] px-5 py-2.5 text-base font-semibold tracking-[0.3px] text-white transition-colors hover:bg-[#665571] md:col-auto md:justify-self-end md:px-6"
+					class="hidden min-h-[44px] min-w-[44px] items-center justify-center rounded-md bg-[#7b6886] px-5 py-2.5 text-base font-semibold tracking-[0.3px] text-white transition-colors hover:bg-[#665571] focus:outline-none focus:ring-2 focus:ring-[#7b6886] focus:ring-offset-2 md:col-auto md:inline-flex md:justify-self-end md:px-6"
 					href="#kontakt"
 				>
 					Umów wizytę
@@ -67,7 +68,35 @@ import "../styles/tailwind.css";
 			</nav>
 		</header>
 
-		<main class="mx-auto w-full max-w-[1200px] px-4 pb-14 pt-8 sm:px-5 sm:pb-16 sm:pt-10 md:px-7 md:pb-20 md:pt-16 lg:px-8 lg:py-[88px] 2xl:px-10">
+		<main>
+			<section
+				class="bg-[#F7F7F9] border-b border-[#E5E5EA] py-16 sm:py-20 md:py-24 lg:py-[120px]"
+				aria-labelledby="hero-heading"
+			>
+				<div class="mx-auto w-full max-w-[1200px] px-4 sm:px-5 md:px-7 lg:px-8 2xl:px-10">
+					<div class="mx-auto max-w-[42rem] text-center">
+						<h1
+							id="hero-heading"
+							class="font-['Playfair_Display','Cormorant_Garamond',Georgia,serif] text-[32px] font-semibold leading-[1.2] tracking-[-0.3px] text-[#2B2B2F] sm:text-[40px] md:text-5xl"
+						>
+							Kancelaria notarialna — pewność i zaufanie
+						</h1>
+						<p class="mt-4 text-lg leading-[1.6] text-[#44444A] sm:mt-5 sm:text-[18px] md:mt-6">
+							Świadczymy czynności notarialne z pełną starannością. Bezpieczeństwo prawne, dyskrecja i indywidualne podejście do każdej sprawy.
+						</p>
+						<p class="mt-6 sm:mt-8">
+							<a
+								class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded bg-[#7B6886] px-7 py-3.5 text-base font-medium tracking-[0.3px] text-white transition-[background-color] duration-200 ease-out hover:bg-[#665571] focus:outline-none focus:ring-2 focus:ring-[#7B6886] focus:ring-offset-2"
+								href="#kontakt"
+							>
+								Umów wizytę
+							</a>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<div class="mx-auto w-full max-w-[1200px] px-4 pb-14 pt-12 sm:px-5 sm:pb-16 sm:pt-14 md:px-7 md:pb-20 md:pt-16 lg:px-8 lg:pb-[88px] lg:pt-20 2xl:px-10">
 			<section
 				id="o-nas"
 				class="rounded-md border border-[#e5e5ea] bg-white px-4 py-6 shadow-[0_4px_12px_rgba(0,0,0,0.04)] sm:px-5 sm:py-7 md:px-7 md:py-9 lg:p-12"
@@ -114,7 +143,7 @@ import "../styles/tailwind.css";
 				<ul class="mt-4 grid list-none gap-2 p-0">
 					<li>
 						<a
-							class="inline-flex min-h-[44px] items-center font-semibold text-[#7b6886] underline-offset-2 hover:text-[#665571]"
+							class="inline-flex min-h-[44px] min-w-[44px] items-center rounded px-2 py-2 font-semibold text-[#7b6886] underline-offset-2 hover:text-[#665571] focus:outline-none focus:ring-2 focus:ring-[#7b6886] focus:ring-offset-2"
 							href="tel:+48123456789"
 						>
 							+48 123 456 789
@@ -122,7 +151,7 @@ import "../styles/tailwind.css";
 					</li>
 					<li>
 						<a
-							class="inline-flex min-h-[44px] items-center font-semibold text-[#7b6886] underline-offset-2 hover:text-[#665571]"
+							class="inline-flex min-h-[44px] min-w-[44px] items-center rounded px-2 py-2 font-semibold text-[#7b6886] underline-offset-2 hover:text-[#665571] focus:outline-none focus:ring-2 focus:ring-[#7b6886] focus:ring-offset-2"
 							href="mailto:kontakt@kancelaria.pl"
 						>
 							kontakt@kancelaria.pl
@@ -130,7 +159,7 @@ import "../styles/tailwind.css";
 					</li>
 					<li>
 						<a
-							class="inline-flex min-h-[44px] items-center font-semibold text-[#7b6886] underline-offset-2 hover:text-[#665571]"
+							class="inline-flex min-h-[44px] min-w-[44px] items-center rounded px-2 py-2 font-semibold text-[#7b6886] underline-offset-2 hover:text-[#665571] focus:outline-none focus:ring-2 focus:ring-[#7b6886] focus:ring-offset-2"
 							href="https://maps.google.com/?q=Krakowskie+Przedmieście+10,+Warszawa"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -140,6 +169,7 @@ import "../styles/tailwind.css";
 					</li>
 				</ul>
 			</section>
+			</div>
 		</main>
 
 		<script is:inline>

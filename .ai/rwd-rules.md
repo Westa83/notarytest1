@@ -40,8 +40,6 @@ Breakpointy powinny wynikać z projektu, a nie z konkretnych urządzeń.
 ## 1.4 Optymalizacja UX mobilnego
 
 - Hamburger menu (czytelne i intuicyjne)
-- Sticky CTA (opcjonalnie)
-- Skrócona treść (więcej konkretu, mniej tekstu)
 - Brak hover-only interactions
 - Szybki dostęp do kontaktu
 

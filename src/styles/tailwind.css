@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+/* Breakpointy zgodne z .ai/rwd-rules.md: 320 (baza), 480, 768, 1024, 1440 */
+@theme {
+	--breakpoint-sm: 30rem;   /* 480px – większe telefony */
+	--breakpoint-md: 48rem;   /* 768px – tablet */
+	--breakpoint-lg: 64rem;   /* 1024px – mały laptop */
+	--breakpoint-xl: 90rem;   /* 1440px – desktop */
+}
