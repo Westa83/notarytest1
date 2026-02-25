@@ -1,6 +1,22 @@
 ---
 import "../styles/tailwind.css";
 ---
+<style>
+	@keyframes hero-fade-in {
+		from {
+			opacity: 0;
+			transform: translateY(8px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	.hero-anim {
+		animation: hero-fade-in 400ms ease-out forwards;
+		opacity: 0;
+	}
+</style>
 
 <html lang="pl" class="scroll-smooth">
 	<head>
@@ -10,7 +26,7 @@ import "../styles/tailwind.css";
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+3:wght@400;500;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@400;500&family=Playfair+Display:wght@600&family=Source+Sans+3:wght@400;500;600&display=swap"
 			rel="stylesheet"
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,28 +86,65 @@ import "../styles/tailwind.css";
 
 		<main>
 			<section
-				class="bg-[#F7F7F9] border-b border-[#E5E5EA] py-16 sm:py-20 md:py-24 lg:py-[120px]"
+				class="hero-section relative border-b border-[#E5E5EA] bg-[#F6F4F8] py-20 md:py-[100px] lg:min-h-[85vh] lg:py-[120px]"
 				aria-labelledby="hero-heading"
 			>
-				<div class="mx-auto w-full max-w-[1200px] px-4 sm:px-5 md:px-7 lg:px-8 2xl:px-10">
-					<div class="mx-auto max-w-[42rem] text-center">
+				<div class="mx-auto grid w-full max-w-[1200px] grid-cols-12 gap-6 px-4 sm:px-5 md:px-7 lg:gap-6 lg:px-8 2xl:px-10">
+					<!-- Lewa strona: treść (układ poziomy od 768px) -->
+					<div class="hero-content col-span-12 flex flex-col md:col-span-7 lg:col-span-7">
 						<h1
 							id="hero-heading"
-							class="font-['Playfair_Display','Cormorant_Garamond',Georgia,serif] text-[32px] font-semibold leading-[1.2] tracking-[-0.3px] text-[#2B2B2F] sm:text-[40px] md:text-5xl"
+							class="hero-anim font-['Playfair_Display','Cormorant_Garamond',Georgia,serif] text-[34px] font-semibold leading-[1.2] tracking-[-0.3px] text-[#2B2B2F] md:text-[44px] lg:max-w-[620px] lg:text-[56px] lg:leading-[1.15]"
+							style="margin-bottom: 32px;"
 						>
-							Kancelaria notarialna — pewność i zaufanie
+							Pewność prawa.<br />Spokój decyzji.
 						</h1>
-						<p class="mt-4 text-lg leading-[1.6] text-[#44444A] sm:mt-5 sm:text-[18px] md:mt-6">
+						<div
+							class="hero-anim h-0.5 w-16 bg-[#7B6886]"
+							style="margin-bottom: 32px; animation-delay: 60ms;"
+							aria-hidden="true"
+						></div>
+						<p
+							class="hero-anim font-[Inter,ui-sans-serif,sans-serif] text-[18px] leading-[1.6] text-[#5C5C63]"
+							style="margin-bottom: 40px; max-width: 540px; animation-delay: 40ms;"
+						>
 							Świadczymy czynności notarialne z pełną starannością. Bezpieczeństwo prawne, dyskrecja i indywidualne podejście do każdej sprawy.
 						</p>
-						<p class="mt-6 sm:mt-8">
+						<div
+							class="hero-anim flex flex-row items-center justify-between sm:justify-start sm:gap-5"
+							style="animation-delay: 120ms;"
+						>
 							<a
-								class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded bg-[#7B6886] px-7 py-3.5 text-base font-medium tracking-[0.3px] text-white transition-[background-color] duration-200 ease-out hover:bg-[#665571] focus:outline-none focus:ring-2 focus:ring-[#7B6886] focus:ring-offset-2"
+								class="inline-flex h-12 min-w-[44px] shrink-0 items-center justify-center rounded-md bg-[#7B6886] px-7 font-medium text-white shadow-sm transition-all duration-[250ms] ease-out hover:-translate-y-px hover:bg-[#6A5876] focus:outline-none focus:ring-2 focus:ring-[#7B6886] focus:ring-offset-2"
 								href="#kontakt"
 							>
 								Umów wizytę
 							</a>
-						</p>
+							<a
+								class="inline-flex min-h-[44px] min-w-[44px] shrink-0 items-center font-medium text-[#7B6886] underline-offset-2 hover:underline focus:outline-none focus:ring-2 focus:ring-[#7B6886] focus:ring-offset-2"
+								href="#o-nas"
+							>
+								Dowiedz się więcej
+							</a>
+						</div>
+					</div>
+					<!-- Prawa strona: obraz (obok treści od 768px) -->
+					<div class="hero-visual hero-anim col-span-12 mb-8 md:col-span-5 md:col-start-8 md:mb-0 lg:col-span-5 lg:col-start-8 lg:mb-0" style="animation-delay: 80ms;">
+						<div class="relative h-[320px] overflow-hidden rounded-[10px] shadow-[0_20px_60px_rgba(0,0,0,0.08)] md:min-h-[320px] md:h-[42vh] lg:min-h-[420px] lg:h-[52vh] xl:h-[560px] md:rounded-xl lg:rounded-xl">
+							<img
+								src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80"
+								alt="Kancelaria notarialna — wnętrze biura"
+								class="h-full w-full object-cover"
+								width="600"
+								height="560"
+								fetchpriority="high"
+							/>
+							<div
+								class="absolute inset-0 rounded-[10px] lg:rounded-xl"
+								style="background: linear-gradient(to bottom, rgba(123,104,134,0.06), rgba(123,104,134,0.02));"
+								aria-hidden="true"
+							></div>
+						</div>
 					</div>
 				</div>
 			</section>

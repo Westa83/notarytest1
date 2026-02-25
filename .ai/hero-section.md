@@ -77,3 +77,19 @@ Fade-in + translateY(8px)
 Czas: 400ms
 Opóźnienie CTA: 120ms
 Bez slide z boku (zbyt dynamiczne)
+
+Tablet (1024px)
+Grid nadal 12 kolumn
+Treść: 1–8
+Obraz: 1–12 poniżej
+Padding: 100px
+H1: 44px
+Mobile (375px)
+Układ pionowy.
+Parametry:
+Padding góra/dół: 80px
+H1: 34px
+Line-height: 1.2
+Obraz poniżej CTA
+Border-radius obrazu: 10px
+Odstęp między sekcjami: 32px
